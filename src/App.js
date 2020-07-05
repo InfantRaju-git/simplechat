@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+//chatra code begins here
 (function(d, w, c) {
   w.ChatraID = 'hG7t4GAk7GZpMjZrN';
   var s = d.createElement('script');
@@ -11,7 +12,7 @@ import './App.css';
   s.src = 'https://call.chatra.io/chatra.js';
   if (d.head) d.head.appendChild(s);
 })(document, window, 'Chatra');
-
+//chatra code ends here
 function App() {
   return (
     <div className="App">
