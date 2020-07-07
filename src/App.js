@@ -27,13 +27,21 @@ function App (props) {
     setDataUri(dataUri);
     console.log('takePhoto');
   }
+  function myFunction() {
+    var x = document.getElementById("demo");
+    //if (x.style.display === "none") {
+      x.style.display = "block";
+   // } else {
+     // x.style.display = "none";
+    //}
+  }
   
- 
+  // onclick="myFunction()"
   return (
     <div>
       {
         <Camera
-          onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
+          onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri);myFunction(); } }
               idealFacingMode = {FACING_MODES.ENVIRONMENT}
       idealResolution = {{width: 640, height: 480}}
       imageType = {IMAGE_TYPES.PNG}
@@ -47,7 +55,7 @@ function App (props) {
                 />
                 
       }
-      <div className="entireframe" download >
+      <div className="entireframe" id="demo" >
       <img src={template} className="mainframe"/>
       <img src={dataUri} className="innerimg"/>
       </div>
