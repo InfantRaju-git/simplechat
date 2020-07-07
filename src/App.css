@@ -7,6 +7,28 @@
   pointer-events: none;
 }
 
+.entireframe
+{
+  position: relative; left: 0; top: 0;
+}
+.mainframe
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 500;
+    height: 300;
+  }
+.innerimg
+  {
+    position: absolute;
+    margin:50mm 120mm;
+    top:0;
+    left:0;
+    width: 380px;
+    height: 240px;
+  }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

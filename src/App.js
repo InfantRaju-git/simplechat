@@ -1,6 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState}  from 'react';
+import template from "./template.png";
 import './App.css';
+import Camera, { FACING_MODES, IMAGE_TYPES } from 'react-html5-camera-photo';
+import 'react-html5-camera-photo/build/css/index.css';
+
 //chatra code begins here
 (function(d, w, c) {
   w.ChatraID = 'hG7t4GAk7GZpMjZrN';
@@ -13,25 +16,46 @@ import './App.css';
   if (d.head) d.head.appendChild(s);
 })(document, window, 'Chatra');
 //chatra code ends here
-function App() {
+
+
+function App (props) {
+  const [dataUri, setDataUri] = useState('');
+
+  function handleTakePhoto (dataUri) {
+    // Do stuff with the photo..
+    console.log(dataUri);
+    setDataUri(dataUri);
+    console.log('takePhoto');
+  }
+  
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          hello click the chat icon to chat
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        <Camera
+          onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
+              idealFacingMode = {FACING_MODES.ENVIRONMENT}
+      idealResolution = {{width: 640, height: 480}}
+      imageType = {IMAGE_TYPES.PNG}
+      imageCompression = {0.97}
+      isMaxResolution = {true}
+      isImageMirror = {false}
+      isSilentMode = {false}
+      isDisplayStartCameraError = {true}
+      isFullscreen = {false}
+      sizeFactor = {1}
+                />
+                
+      }
+      <div className="entireframe" download >
+      <img src={template} className="mainframe"/>
+      <img src={dataUri} className="innerimg"/>
+      </div>
     </div>
   );
 }
+  
+
+
 
 export default App;
