@@ -289,3 +289,244 @@ a {
     flex: 1 0 100%;
   }
 }
+
+.wrapper{
+  width:500px;
+  margin:0 auto;
+}
+
+ul{
+  maring:0;
+  padding:0px;
+ 
+  list-style:none;
+}
+ul li{
+
+    padding:20px;
+    margin-top:20px;
+    background-color:rgba(255,255,255,0.9);
+   -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+    border-radius:3px;
+   -webkit-box-shadow: 0px 0px 2px #888888;
+   -moz-box-shadow: 0px 0px 2px #888888;
+     box-shadow: 0px 0px 2px #888888;
+    
+}
+.head{ 
+  padding:20px;
+  color:red;
+  font-size:36px;
+  text-align:center;
+  background-color:#ed6f70;
+  color:#fff;
+  -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+    border-radius:3px;
+  -webkit-box-shadow: 0px 0px 2px #888888;
+  -moz-box-shadow: 0px 0px 2px #888888;
+     box-shadow: 0px 0px 2px #888888;
+}
+.proPic,img{
+  display:inline-block;
+  width:80px;
+  height:80px;
+
+
+}
+
+li span{
+  font-size:18px;
+  color:#a0a29d;
+  margin-right:40px;
+   height: 32px;
+  line-height: 32px;
+
+ 
+}
+.likes:before{
+  content:url("https://cdn0.iconfinder.com/data/icons/users-android-l-lollipop-icon-pack/24/group2-32.png");
+    vertical-align: -30%;
+  margin-right:2%;
+  opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.photo:before{
+  content:url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-32.png");
+    vertical-align: -25%;
+  margin-right:2%;
+  opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.comments:before{
+
+  content:url("https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/bubble-24-24.png");
+   vertical-align: -25%;
+  margin-right:2%;
+  opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.info{
+  width:75%;
+
+  margin:0;
+  margin-left:5%;
+  display:inline-block;
+
+  
+}
+
+.social{
+   
+   padding-top:20px; 
+}
+
+h3{
+
+  color:#767a7b;
+  margin:0;
+  padding-bottom:20px;
+  font-size:25px;
+  font-weight:100;
+  border-bottom:1px solid #e0e1dd;
+}
+h3:after{
+  
+ float:right;
+  -webkit-filter: sepia(70%);
+  filter:  sepia(70%);
+}
+.fav{
+  float:right;
+}
+
+
+html, body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+[v-cloak] {
+  display: none;
+}
+img {
+  max-width: 100%;
+}
+#app {
+  margin: 50px auto;
+}
+#app .search-box {
+  margin-bottom: 20px;
+  border: 1px solid #d1d1d1;
+  padding: 5px 30px;
+  border-radius: 40px;
+}
+#app .search-box label {
+  margin-right: 1%;
+}
+#app .search-box label i {
+  line-height: 26px;
+  color: #0ab38d;
+}
+#app .search-box input {
+  line-height: 26px;
+  border: none;
+  width: 90%;
+}
+#app .search-box input:focus {
+  outline: none;
+}
+#app .news-wrappe__item {
+  border-bottom: 1px solid #d1d1d1;
+  overflow: hidden;
+}
+#app .news-wrappe__item:last-child {
+  border: none;
+}
+#app .news-wrappe__item--text h2 {
+  margin: 0;
+}
+#app .news-wrappe__item--text h2 a {
+  color: #212121;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#app .news-wrappe__item--text h2 a:hover {
+  color: #0ab38d;
+}
+#app .news-wrappe__item--text p {
+  color: #606060;
+}
+#app .news-wrappe__item--text span {
+  color: #606060;
+  font-size: 0.9rem;
+}
+#app .news-wrappe__item--text span i {
+  color: #0ab38d;
+}
+#footer {
+  margin-top: 50px;
+  background: #f2f2f2;
+  padding: 15px 0;
+  text-align: center;
+  color: #606060;
+  font-size: 0.9rem;
+}
+#footer a {
+  color: #606060;
+}
+#footer a:hover {
+  color: #0ab38d;
+}
+@media screen and (min-width: 1024px) {
+  #app {
+    width: 800px;
+ }
+  .news-wrappe__item {
+    padding: 20px 0;
+ }
+  .news-wrappe__item img {
+    float: left;
+    display: block;
+    width: 30%;
+    margin-right: 5%;
+ }
+  .news-wrappe__item--text {
+    float: left;
+    width: 65%;
+ }
+}
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .search-box {
+    margin: 20px;
+ }
+  .news-wrappe__item {
+    padding: 20px;
+    overflow: hidden;
+ }
+  .news-wrappe__item img {
+    float: left;
+    display: block;
+    width: 30%;
+    margin-right: 5%;
+ }
+  .news-wrappe__item--text {
+    float: left;
+    width: 65%;
+ }
+}
+@media screen and (max-width: 480px) {
+  .search-box {
+    margin: 20px;
+ }
+  #app .news-wrappe__item {
+    padding: 15px;
+ }
+  #app .news-wrappe__item img {
+    width: 100%;
+ }
+  #app .news-wrappe__item--text {
+    width: 100%;
+ }
+}

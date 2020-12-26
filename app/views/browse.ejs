@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="/css/mystyle.css">
   <% include ./parts/head.ejs %>
 </head>
 <body>
   <% include ./parts/header.ejs %>
 
-  <main>
-    <main>
-        <div>
-            <div class="content-2">
-                <div class="branding">
-                  <!-- here goes the data welcome message  -->
-                  <h2>CStack Applications</h2>
-                </div>
-                <h3 style="color: aliceblue;">Hello <%= user.username%><br>
-                <h5 style="color: aliceblue;">Email ID <%= user.email %></h5>
-                <h2 style="color: aliceblue;">Data <%= data. RelatedTopics[0].Result%></h2>
-                </h3>
-                <h
+  <main>            
+            <div class="wrapper">
+              <ul class="menu">
+                  <div class="head">Browser</div> <br>
+                  <form action="/browse" method="POST">
+                  <li class="info"><input type="text" id="search" name="search" placeholder="search" style="display: inherit;padding-left: 50px;padding-right: 50px;padding-top: 10px;padding-bottom: 10px;">
+                      <input style="padding-left: 5px;font-size: 20px;" type="submit" value="Search"/>
+                  </li>
+                  </form>
+                  <% if(data.length!=0){ %>
+              <ul id="mysub">
+                <% for(var i=0;i<data.RelatedTopics.length;i++) { if(data.RelatedTopics[i].Text != undefined) {%>
+                <li>
+                  <div class='info'>
+                    <h3><%= data.RelatedTopics[i].Text%></h3>
+                    <div class='social'>
+                      <span>Read more on: <a href="<%= data.RelatedTopics[i].FirstURL %>"><%= data.RelatedTopics[i].FirstURL %></a></span>
+                    </div>
+                  </div>
+                </li>
+                <% }} %>
+                </ul>
+            <% }%>
+              </ul>
             </div>
-        </div>
-    </main>
   </main>
 
   <!-- <% include ./parts/footer.ejs %> -->
