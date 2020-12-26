@@ -5,22 +5,22 @@ const router = express.Router();
 const auth = require("../../middlewares/auth.js");
 
 module.exports.controller = function(app) {
-  
-  app.get("/browse", auth.checkLogin, function(req, res) {
 
-  request("http://api.duckduckgo.com/?q=apple&pageSize=10&format=json&pretty=1", function(err, response,body){
+  app.get("/news", auth.checkLogin, function(req, res) {
+
+  request("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&apiKey=26060a3db05e48baa1f9e1697e79d9ea", function(err, response,body){
     if(err){console.log(err);}
     if(! err && response.statusCode == 200) {
-          var data = JSON.parse(body);
-          console.log(data);
-          res.render("browse", {
-            title:"Browse",
-            data: data,
+          var mydata = JSON.parse(body);
+          res.render("news", {
+            title:"News",
+            mydata: mydata,
             user: req.session.user,
             chat: req.session.chat
           });
       }
   });
+
 
 
   });

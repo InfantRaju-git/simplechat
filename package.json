@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-   "start-dev":"nodemon app.js"
+    "start-dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,8 @@
     "real-time",
     "chat-app"
   ],
-  "author": "VithalReddy",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/InfantRaju-git/cstack/issues"
-  },
-  "homepage": "https://github.com/InfantRaju-git/cstack#readme",
+  "author": "Infant Raju",
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.17.2",
     "connect-mongo": "^3.0.0",
@@ -39,6 +35,7 @@
     "morgan": "^1.8.1",
     "nodemon": "^2.0.6",
     "path": "^0.12.7",
+    "request": "^2.88.2",
     "shortid": "^2.2.8",
     "socket.io": "^2.0.1"
   }

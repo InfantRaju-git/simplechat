@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ./parts/head.ejs %>
+  <link rel="stylesheet" href="/css/mystyle.css">
+</head>
+<body>
+  <% include ./parts/header.ejs %>
+
+  <main>
+            <div class="content-2">
+                <div class="branding">
+                  <!-- here goes the data welcome message  -->
+                  <h2>CStack Applications</h2>
+                </div>
+                <h3 style="color: aliceblue;">Hello <%= user.username%><br>
+                <h5 style="color: aliceblue;">Email ID <%= user.email %></h5>
+                </h3>
+            </div>
+
+            <div id="productPage" class="list-view">
+              <ul id="productWrapper">
+                <% for(var i=0; i<mydata.articles.length;i++) {%>
+                <li class="product-block">
+                  <div class="pb-upper">
+                    <div class="pb-image">
+                      <a href="#"><img src="<%= mydata.articles[i].urlToImage%>" border="0" alt="Some great product" class="pb-img"></a>
+                    </div>
+                    <div class="pb-description">
+                      <p class="description">
+                        <a href="#" title="View more information about the great product"><%= mydata.articles[i].title%></a>
+                      </p>
+                      <p style="font-size: medium;color: grey;">
+                        <a href="#" title="View more information about the great product"><%= mydata.articles[i].description%></a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="pb-lower">
+                    <a href="<%= mydata.articles[i].url%>" class="button">Read more</a>
+                  </div>
+                 </li>
+                 <% }%>
+              </ul>
+            </div>
+
+  </main>
+
+  <!-- <% include ./parts/footer.ejs %> -->
+</body>
+</html>
