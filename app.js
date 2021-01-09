@@ -8,6 +8,9 @@ const methodOverride = require("method-override");
 const path = require("path");
 const fs = require("fs");
 const logger = require("morgan");
+const crypto = require("crypto");
+const multer = require("multer");
+const GridFsStorage = require("multer-gridfs-storage");
 
 const app = express();
 const http = require("http").Server(app);
@@ -21,8 +24,10 @@ require("./libs/chat.js").sockets(http);
 app.use(logger("dev"));
 
 //db connection
-//const dbPath = "mongodb://localhost/socketChatDB";
-const dbPath = `mongodb+srv://infant:infant123@cluster0.ve7il.mongodb.net/fproject?retryWrites=true&w=majority`;
+const dbPath = "mongodb://localhost/socketChatDB";
+//const dbPath = `mongodb+srv://infant:infant123@cluster0.ve7il.mongodb.net/fproject?retryWrites=true&w=majority`;
+
+module.exports=dbPath;
 mongoose.connect(dbPath, { useNewUrlParser: true });
 mongoose.connection.once("open", function() {
   console.log("Database Connection Established Successfully.");
