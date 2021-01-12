@@ -6,12 +6,8 @@ const session = require("express-session");
 const mongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
 const path = require("path");
-const fs = require("fs");
 const logger = require("morgan");
-const crypto = require("crypto");
-const multer = require("multer");
-const GridFsStorage = require("multer-gridfs-storage");
-
+const fs = require('fs');
 const app = express();
 const http = require("http").Server(app);
 
@@ -78,7 +74,7 @@ fs.readdirSync("./app/models").forEach(function(file) {
 
 //including controllers files.
 fs.readdirSync("./app/controllers").forEach(function(file) {
-  if (file.indexOf(".js")) {
+  if (file.indexOf(".js")||file.indexOf(".json")) {
     var route = require("./app/controllers/" + file);
     //calling controllers function and passing app instance.
     route.controller(app);
