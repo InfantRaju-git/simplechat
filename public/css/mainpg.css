@@ -1,0 +1,134 @@
+@import "compass/css3";
+ @import url(https://fonts.googleapis.com/css?family=Bitter);
+ @import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+ @import url(https://fonts.googleapis.com/css?family=Carrois+Gothic+SC);
+ * {
+	 margin: 0;
+	 padding: 0;
+	 font-size: 12pt;
+	 font-family: 'Droid Sans';
+}
+ .content {
+	 padding: 0.2em;
+	 margin: 1em;
+}
+ h1 {
+	 background: rgba(0, 0, 0, 0.1);
+	 color: #fff;
+	 padding: 10px;
+	 text-align: center;
+	 font-size: 24px;
+	 font-family: 'bitter';
+}
+ h1 i {
+	 color: rgba(0, 0, 0, 0.9);
+}
+ footer {
+	 background: rgba(0, 0, 0, 0.5);
+	 font-size: 24px;
+	 font-family: 'bitter';
+	 width: 100%;
+	 padding: 10px;
+	 position: fixed;
+	 bottom: 25px;
+}
+ footer .start-button {
+	 position: absolute;;
+	 color: #fff;
+	 left: 10px;
+}
+ footer .start-button:hover {
+	 color: #9ecfb3;
+}
+ footer .start-button:active {
+	 color: #2ecc71 !important;
+}
+ 
+ label {
+	 font-weight: bold;
+	 padding: 0.5em;
+}
+ #flatfields {
+	 margin: 1em auto;
+}
+ .fields {
+	 padding: 1em;
+}
+ .field {
+	 font-family: 'Carrois Gothic SC';
+	 display: flex;
+}
+ .field > input[type=text] {
+	 font-family: 'Carrois Gothic SC';
+	 transition: all 200ms;
+	 display: block;
+}
+ .field > input[type=text]:focus {
+	 outline: #333 auto 5px;
+}
+ .field > input[type=text] {
+	 flex: 1;
+	 padding: 0.6em;
+	 border: 0.2em;
+}
+ .submit {
+	 display: flex;
+	 position: relative;
+	 width: 100px;
+	 margin: 5em auto;
+}
+ button {
+	 padding: 0.6em 0.8em;
+	 background-color: #2ecc71;
+	 color: white;
+	 border: none;
+	 display: block;
+	 font: 12pt;
+	 font-family: 'Droid Sans';
+}
+ button:hover {
+	 cursor: pointer;
+}
+ .menu {
+	 background-color: rgba(0, 0, 0, 0.7);
+	 width: 200px;
+	 bottom: 0;
+	 left: 0;
+	 position: absolute;
+	 padding-bottom: 60px;
+}
+ .menu .close {
+	 font-family: "FontAwesome";
+	 content: "\f00d";
+	 color: #2ecc71;
+	 top: 5px;
+	 height: 10px;
+	 width: 10px;
+	 right: 5px;
+	 position: absolute;
+	 font-size: 1em;
+	 z-index: 15;
+}
+ .menu .close:hover {
+	 cursor: pointer;
+}
+ .menu h1 {
+	 font-family: "Droid Sans";
+	 font-size: 0.9em;
+	 text-transform: uppercase;
+}
+ .menu li {
+	 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	 padding: 0.5em;
+	 padding-left: 1em;
+}
+ .menu li:hover {
+	 background-color: rgba(255, 255, 255, 0.1);
+}
+ .menu li a {
+	 color: #fff;
+	 font-size: 0.9em;
+	 text-align: center;
+	 text-decoration: none;
+}
+ 
