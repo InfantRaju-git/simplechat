@@ -227,9 +227,9 @@ overflow-y:auto;
   padding-top: 25px;
 }
 .onn {
-  box-sizing: content-box;
-  margin: 0;
-  width: 600px;
+  box-sizing: auto;
+  margin: auto;
+  width: 100%;
 }
 .list {
   display: inline-block;
