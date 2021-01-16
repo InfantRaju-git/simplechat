@@ -20,8 +20,8 @@ require("./libs/chat.js").sockets(http);
 app.use(logger("dev"));
 
 //db connection
-//const dbPath = "mongodb://localhost/socketChatDB";
-const dbPath = `mongodb+srv://infant:infant123@cluster0.ve7il.mongodb.net/fproject?retryWrites=true&w=majority`;
+const dbPath = "mongodb://localhost/socketChatDB";
+//const dbPath = `mongodb+srv://infant:infant123@cluster0.ve7il.mongodb.net/fproject?retryWrites=true&w=majority`;
 
 module.exports=dbPath;
 mongoose.connect(dbPath, { useNewUrlParser: true });

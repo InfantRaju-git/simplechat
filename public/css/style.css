@@ -70,9 +70,9 @@ body{
   margin: auto;
   margin-top: 3%;
   width: 50%;
-  border: 2px solid cyan;
+  border: 2px solid white;
   border-radius: 10px;
-  background-color: #19B5FE;
+  background-color: transparent;
 }
 
 

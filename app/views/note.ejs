@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <% include ./parts/head.ejs %>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <h1 class="display-4" style="color: aliceblue;">📒 CStack NotePad</h1><br>
+           <a href="/newnote" class="btn btn-success">New Note</a>&nspb<button class="btn btn-danger" onclick="window.location.href='/main'">Home</button>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <% notes.forEach(note => { %>
+        <div class="card mt-2">
+            <div class="card-body">
+                <h5 class="card-title"><%= note.title %></h5>
+                <p class="text-muted">Posted On: <%= note.createdAt.toLocaleDateString() %></p>
+                <p class="card-text"><%= note.description %></p>
+                <form action="/note/<%= note._id %>?_method=DELETE" method="POST">
+                    <button href="#" class="btn btn-danger float-right">Delete</button>
+                </form>
+            </div>
+        </div>
+        <%}) %>
+    </div>
+</body>
+
+</html>
